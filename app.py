@@ -14,6 +14,11 @@ def home_page():
 	recents = helpers.get_recently_issued()
 	return render_template('index.html', recents=recents)
 
+@app.route('/english')
+def englihs_home_page():
+	recents = helpers.get_recently_issued()
+	return render_template('index_english.html', recents=recents)
+
 @app.route('/keys/<key_name>')
 def key_page(key_name=None):
 	if key_name in os.listdir(config.KEYS_PATH):
@@ -27,6 +32,7 @@ def award_by_hash(identifier=None):
 	award = None
 	if identifier+'.json' in os.listdir(config.JSONS_PATH):
 		id = identifier
+		print id
 	else:
 		hashmap_content = helpers.read_json(config.HASHMAP_PATH)
 		id = hashmap_content.get(identifier, None)

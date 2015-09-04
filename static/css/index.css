@@ -20,3 +20,13 @@ body{
 #footer-info{
   margin-top: 30px;
 }
+
+.panel-title > a:hover {
+	color: yellow;
+  text-decoration: none;
+}
+
+img.translate.img-responsive {
+    width: 50px;
+    float: right;
+}
