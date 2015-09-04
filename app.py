@@ -32,10 +32,12 @@ def award_by_hash(identifier=None):
 	award = None
 	if identifier+'.json' in os.listdir(config.JSONS_PATH):
 		id = identifier
-		print id
 	else:
 		hashmap_content = helpers.read_json(config.HASHMAP_PATH)
 		id = hashmap_content.get(identifier, None)
+	if not id:
+		pubkey_content = helpers.read_json(config.PUBKEYMAP_PATH)
+		id = pubkey_content.get(identifier, None)
 	if id:
 		award, verification_info = helpers.get_id_info(id)
 	if award:
