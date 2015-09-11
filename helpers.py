@@ -15,7 +15,7 @@ def read_file(path):
 	f.close()
 	return data
  
-def get_txid(data,id):
+def get_txid(data, id):
 	return data[id]
 
 def check_display(award):
@@ -27,7 +27,7 @@ def get_id_info(id):
 	if id+'.json' in os.listdir(config.JSONS_PATH):
 		pubkey_content = read_file(config.MLPUBKEY_PATH)
 		txidmap_content = read_json(config.TXIDMAP_PATH)
-		tx_id = "" #get_txid(txidmap_content, id)
+		tx_id = get_txid(txidmap_content, id)
 		recipient = read_json(config.JSONS_PATH+id+'.json')	
 		if recipient:
 			verification_info = {

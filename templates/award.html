@@ -47,13 +47,13 @@
         <div class="col-md-6 col-sm-8 col-xs-12">
           <h6 class="signature-info">Este certificado fue firmado por <span class="no-wrap">Laboratorio para la Ciudad</span>.</h6>
           <h6 class="signature-info">Endorsed by: </h6>
-          {% for endorser in award.extension.certificate.endorsers %}
+          {% for endorser in award.extension.assertion.endorsers %}
             <img class="endorser-logo" src="{{endorser.image}}">
           {% endfor %}
           <br><br>
-          <!-- <button class="btn btn-sm btn-default" id="verify-button" value="{{verification_info}}">Verificar certificado</button>
+          <button class="btn btn-sm btn-default" id="verify-button" value="{{verification_info}}">Verificar certificado</button>
           <span id="verified"> <img id="verified-icon" src="static/img/verified.png"/> Verificado </span>
-          <span id="not-verified"> <img id="not-verified-icon" src="static/img/not-verified.png"/> </span> -->
+          <span id="not-verified"> <img id="not-verified-icon" src="static/img/not-verified.png"/> </span>
         </div>
       </div>
       <div class="row">
@@ -68,7 +68,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="/static/js/jquery.loadingdotdotdot.js"></script>
     <script src="/static/js/awards-verify.js"></script>
 
   </body>
