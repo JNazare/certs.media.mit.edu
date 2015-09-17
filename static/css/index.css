@@ -52,3 +52,8 @@ a.btn-default.language-link{
   background-color: transparent;
   border: none;
 }
+
+.search-field{
+  border-radius: 0px;
+  min-width: 100% !important;
+}

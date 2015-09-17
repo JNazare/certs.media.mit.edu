@@ -47,6 +47,7 @@ def get_id_info(id):
 				"mlPublicKeyURL": recipient["verify"]["signer"],
 				"transactionID": tx_id,
 				"transactionIDURL": 'https://blockchain.info/tx/'+tx_id,
+				"uid": id
 			}
 			if recipient.get("extension"):
 				award["extension"] = recipient["extension"] #FINISH THISSSSS!

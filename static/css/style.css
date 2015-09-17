@@ -67,7 +67,10 @@ a:hover,a:focus{
   white-space: nowrap;
 }
 
-
 .long-word{
   word-wrap: break-word;
+}
+
+.no-padding{
+  padding: 0px;
 }
